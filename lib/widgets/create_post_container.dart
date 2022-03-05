@@ -1,3 +1,5 @@
+import 'package:facebook_ui/data/data.dart';
+import 'package:facebook_ui/widgets/profile.dart';
 import 'package:flutter/material.dart';
 
 class CreatePostContainer extends StatelessWidget {
@@ -11,12 +13,7 @@ class CreatePostContainer extends StatelessWidget {
       child: Column(children: [
         Row(
           children: [
-            CircleAvatar(
-              radius: 20,
-              backgroundColor: Colors.grey[200],
-              backgroundImage: NetworkImage(
-                  "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bWFsZXxlbnwwfHwwfHw%3D&w=1000&q=80"),
-            ),
+            ProfileAvatar(imageUrl: currentUser.imageUrl),
             const SizedBox(
               width: 8,
             ),
