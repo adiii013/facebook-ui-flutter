@@ -10,10 +10,15 @@ class ProfileAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      children: [CircleAvatar(
-        radius: 20,
-        backgroundColor: Colors.grey[200],
-        backgroundImage: NetworkImage(imageUrl),
+      children: [
+        CircleAvatar(
+          radius: 20,
+          backgroundColor: Palette.facebookBlue,
+          child: CircleAvatar(
+          radius: 17,
+          backgroundColor: Colors.grey[200],
+          backgroundImage: NetworkImage(imageUrl),
+          ),
         ),
         isActive ?
         Positioned(
