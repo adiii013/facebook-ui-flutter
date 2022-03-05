@@ -1,5 +1,6 @@
 import 'package:facebook_ui/widgets/circle_button.dart';
 import 'package:facebook_ui/widgets/create_post_container.dart';
+import 'package:facebook_ui/widgets/rooms.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -38,6 +39,9 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
           SliverToBoxAdapter(child: CreatePostContainer()),
+          SliverPadding(
+            padding:  const EdgeInsets.fromLTRB(0, 10, 0, 5),
+            sliver: SliverToBoxAdapter(child: Room(),))
         ],
       ),
     );
