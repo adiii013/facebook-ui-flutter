@@ -1,10 +1,14 @@
-import 'package:facebook_ui/data/data.dart';
 import 'package:facebook_ui/widgets/profile.dart';
 import 'package:flutter/material.dart';
+import '../models/models.dart';
 
 class CreatePostContainer extends StatelessWidget {
-  const CreatePostContainer({Key? key}) : super(key: key);
+final User currentUser;
 
+  const CreatePostContainer({
+    Key? key,
+    required this.currentUser,
+  }) : super(key: key);  
   @override
   Widget build(BuildContext context) {
     return Container(

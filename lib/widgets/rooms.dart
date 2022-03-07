@@ -5,7 +5,12 @@ import 'package:flutter/material.dart';
 import '../models/models.dart';
 
 class Room extends StatelessWidget {
-  const Room({Key? key}) : super(key: key);
+  final List<User> onlineUsers;
+
+  const Room({
+    Key? key,
+    required this.onlineUsers,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
